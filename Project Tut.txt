@@ -1,0 +1,4 @@
+# create virtual environment with python -m venv your_venv_name
+# activate it using your_venv_name\Scripts\activate
+# pip freeze shows all the dependencies needed 
+# pip freeze > requirements.txt ---> writes all the log in the requirements.txt file
