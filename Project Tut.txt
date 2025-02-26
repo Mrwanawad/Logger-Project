@@ -5,3 +5,5 @@
 # To cretae your secret 
 1) go to setting
 2) Secrets >> actions >> new secret >> new repo secret
+3) to set on your local machine >> setx secret-name secret=value
+4) to check if it's set >> echo %secret-name%
