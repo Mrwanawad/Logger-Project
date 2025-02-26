@@ -28,7 +28,7 @@ jobs:
         
       - name: commit files
         run : |
-          git config --local use.email "action@github.com"
+          git config --local user.email "action@github.com"
           git config --local user.name "Github Action"  
           git add -A
           
