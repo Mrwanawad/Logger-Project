@@ -1,0 +1,39 @@
+name: run main.py # file name
+
+on:
+  schedule: 
+    - cron: '*/2 * * * *' # runs every 2 hours
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v2
+
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+          
+      - name : install python packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          
+      - name: execute our script
+        env: 
+          SOME_SECRET: ${{ secrets.SOME_SECRET }}
+        run: python main.py
+        
+      - name: commit files
+        run : |
+          git config --local use.email "action@github.com"
+          git config --local user.name "Github Action"  
+          git add -A
+          
+      - name: push changes 
+        uses: ad-m/github-psh-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: main     
