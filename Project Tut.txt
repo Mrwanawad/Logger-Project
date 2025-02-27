@@ -7,3 +7,20 @@
 2) Secrets >> actions >> new secret >> new repo secret
 3) to set on your local machine >> setx secret-name secret=value
 4) to check if it's set >> echo %secret-name%
+
+# if there is an error in push changes step :
+🔸 Steps to Generate a PAT Token:
+1️⃣ Go to GitHub Developer Settings
+2️⃣ Click "Generate new token (classic)"
+3️⃣ Select the following permissions:
+
+✅ repo (Full control of private repositories)
+✅ workflow (Update workflow files)
+4️⃣ Click "Generate token"
+5️⃣ Copy the Personal Access Token (PAT)
+🔸 Add the Token as a GitHub Secret
+1️⃣ Go to your repository → Settings → Secrets and variables → Actions
+2️⃣ Click "New repository secret"
+3️⃣ Name it: GH_PAT
+4️⃣ Paste your PAT token
+5️⃣ Click Save
