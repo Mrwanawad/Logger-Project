@@ -15,10 +15,6 @@ formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(messag
 logger_file_handler.setFormatter(formatter)
 logger.addHandler(logger_file_handler)
 
-try:
-    MY_SECRET = os.environ["MY_SECRET"]
-except KeyError:
-    MY_SECRET = "Token not available!"
 
 if __name__ == "__main__":
     logger.info(f"Token value: {MY_SECRET}")

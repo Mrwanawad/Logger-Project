@@ -1,0 +1,13 @@
+
+        Trigger                Use
+Events ---------> Workflows ---------> Actions
+
+
+Events: Push requests or Scheduled events
+-------
+
+Workflows: Workflows are like pipelines, inside .github/workflows dir
+-------
+
+Actions: already built-in actions in github 
+-------
