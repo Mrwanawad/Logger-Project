@@ -17,7 +17,6 @@ logger.addHandler(logger_file_handler)
 
 
 if __name__ == "__main__":
-    logger.info(f"Token value: {MY_SECRET}")
 
     url = "https://api.open-meteo.com/v1/forecast"
     params = {
